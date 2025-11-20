@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/button";
@@ -10,6 +10,8 @@ import { queueScrollTarget, scrollToHash } from "@/lib/scroll";
 const navLinks = [
   { label: "How It Works", href: "#how-it-works" },
   { label: "Features", href: "#features" },
+  { label: "Why Obsilab", href: "#why-obsilab" },
+
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
 ];

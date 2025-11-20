@@ -25,7 +25,9 @@ export const Index = () => {
       </section>
       <DemoPreviewSection />
       <PainPointsSection />
-      <ComparisonSection />
+      <section id="why-obsilab">
+        <ComparisonSection />
+      </section>
       <AudienceSection />
       <section id="pricing">
         <PricingSection />
