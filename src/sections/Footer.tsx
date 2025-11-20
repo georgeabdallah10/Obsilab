@@ -31,7 +31,7 @@ const footerSections: FooterSection[] = [
       { label: "Contact", href: "mailto:hello@obsilab.com", external: true },
     ],
   },
-  {
+  /*{
     title: "Resources",
     links: [
       { label: "Docs", href: "https://docs.obsilab.com", external: true },
@@ -43,7 +43,7 @@ const footerSections: FooterSection[] = [
       { label: "Status", href: "https://status.obsilab.com", external: true },
       { label: "GitHub", href: "https://github.com/obsilab", external: true },
     ],
-  },
+  },*/
   {
     title: "Legal",
     links: [
