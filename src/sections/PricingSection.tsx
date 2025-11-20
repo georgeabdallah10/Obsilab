@@ -23,7 +23,7 @@ export const PricingSection = () => {
     },
     {
       name: "Starter",
-      price: "$29",
+      price: "$19",
       tagline: "Ship with confidence",
       whyThisPlan: "Best for solo devs shipping weekly.",
       features: [
@@ -39,7 +39,7 @@ export const PricingSection = () => {
     },
     {
       name: "Pro",
-      price: "$99",
+      price: "$89",
       tagline: "Built for growing teams",
       whyThisPlan: "10× the power. Find issues before users do.",
       features: [
