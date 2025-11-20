@@ -17,10 +17,10 @@ export const DemoPreviewSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            See it in action
+            See Obsilab in action
           </h2>
           <p className="text-xl text-antique-pearl max-w-2xl mx-auto">
-            Real-time metrics and AI-powered insights during your load tests
+            Real-time metrics and AI diagnostics during every test
           </p>
         </motion.div>
 
@@ -95,8 +95,7 @@ export const DemoPreviewSection = () => {
                 <div className="flex-1">
                   <h4 className="text-lg font-bold text-foreground mb-2">AI Insight</h4>
                   <p className="text-antique-pearl mb-3">
-                    Your database connection pool is showing signs of saturation at 8,000+ concurrent users. 
-                    Consider increasing max_connections from 100 to 200.
+                    Database connection pool saturated at 500 concurrent users — recommend increasing pool size or adding read replicas.
                   </p>
                   <div className="flex gap-2">
                     <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-medium">

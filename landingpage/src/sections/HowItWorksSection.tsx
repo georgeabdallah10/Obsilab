@@ -8,20 +8,20 @@ export const HowItWorksSection = () => {
     {
       icon: Link,
       number: "01",
-      title: "Enter your API",
-      description: "Paste your endpoint URL. No code, no scripts, no configuration files.",
+      title: "Paste your endpoint",
+      description: "No code, no config, no scripts.",
     },
     {
       icon: Gauge,
       number: "02",
-      title: "Select traffic level",
-      description: "Choose from 100 to 100,000+ virtual users. Scale instantly across regions.",
+      title: "Set your traffic",
+      description: "Choose 100 to 100,000+ VUs across global regions.",
     },
     {
       icon: Lightbulb,
       number: "03",
-      title: "Get AI-powered diagnostics",
-      description: "Receive instant insights on bottlenecks, errors, and performance fixes.",
+      title: "Get AI diagnostics",
+      description: "Find bottlenecks, errors, and slowdowns instantly.",
     },
   ];
 
@@ -36,10 +36,10 @@ export const HowItWorksSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            How It Works
+            Load test any API in 3 steps
           </h2>
           <p className="text-xl text-antique-pearl max-w-2xl mx-auto">
-            From zero to stress-tested in three simple steps
+            From zero to stress-tested in under a minute
           </p>
         </motion.div>
 

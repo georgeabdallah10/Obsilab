@@ -12,11 +12,18 @@ import {
 
 export const ComparisonSection = () => {
   const features = [
-    { feature: "No-code testing", obsilab: true, k6: false, locust: false, k6Cloud: false },
-    { feature: "Auto-scaled load", obsilab: true, k6: false, locust: false, k6Cloud: true },
-    { feature: "AI insights", obsilab: true, k6: false, locust: false, k6Cloud: false },
+    { feature: "One-click load testing", obsilab: true, k6: false, locust: false, k6Cloud: false },
+    { feature: "True no-code load tests", obsilab: true, k6: false, locust: false, k6Cloud: false },
     { feature: "No scripts required", obsilab: true, k6: false, locust: false, k6Cloud: false },
-    { feature: "Beginner-friendly", obsilab: true, k6: false, locust: false, k6Cloud: false },
+    { feature: "No infrastructure to manage", obsilab: true, k6: false, locust: false, k6Cloud: true },
+    { feature: "No DevOps required", obsilab: true, k6: false, locust: false, k6Cloud: false },
+    { feature: "AI-powered root-cause analysis", obsilab: true, k6: false, locust: false, k6Cloud: false },
+    { feature: "Instant AI insights", obsilab: true, k6: false, locust: false, k6Cloud: false },
+    { feature: "Beginner-friendly onboarding", obsilab: true, k6: false, locust: false, k6Cloud: false },
+    { feature: "Modern dashboard", obsilab: true, k6: false, locust: false, k6Cloud: true },
+    { feature: "API-first design", obsilab: true, k6: true, locust: false, k6Cloud: true },
+    { feature: "Built for startups & indie devs", obsilab: true, k6: false, locust: false, k6Cloud: false },
+    { feature: "Pro performance, simple UX", obsilab: true, k6: false, locust: false, k6Cloud: false },
   ];
 
   return (
@@ -30,10 +37,10 @@ export const ComparisonSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Why choose Obsilab?
+            Why Obsilab <span className="bg-gradient-to-r from-primary to-gold-gilded bg-clip-text text-transparent">Dominates</span>
           </h2>
-          <p className="text-xl text-antique-pearl max-w-2xl mx-auto">
-            Built for developers who want results, not configuration files
+          <p className="text-xl text-antique-pearl max-w-3xl mx-auto mb-6">
+            The only tool that combines all essentials. Every competitor fails at least two — most fail five or more.
           </p>
         </motion.div>
 
@@ -104,6 +111,27 @@ export const ComparisonSection = () => {
               </TableBody>
             </Table>
           </div>
+        </motion.div>
+
+        {/* Emotional closing statement */}
+        <motion.div
+          initial={{ opacity: 0, y: 30, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="mt-16 text-center"
+        >
+          <p className="text-2xl md:text-3xl lg:text-4xl font-bold max-w-4xl mx-auto leading-tight">
+            <span className="text-foreground">Obsilab is the </span>
+            <span className="bg-gradient-to-r from-primary via-gold-gilded to-primary bg-clip-text text-transparent">only</span>
+            <span className="text-foreground"> load-testing platform designed for modern devs who </span>
+            <span className="text-shade-frost line-through decoration-inferno-red/50">don't want to write scripts</span>
+            <span className="text-foreground">, </span>
+            <span className="text-shade-frost line-through decoration-inferno-red/50">build infrastructure</span>
+            <span className="text-foreground">, or </span>
+            <span className="text-shade-frost line-through decoration-inferno-red/50">decode charts</span>
+            <span className="text-foreground">.</span>
+          </p>
         </motion.div>
       </div>
     </section>

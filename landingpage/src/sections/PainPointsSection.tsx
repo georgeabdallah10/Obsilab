@@ -4,12 +4,12 @@ import { Database, Lock, Gauge, ListChecks, ShieldAlert, Activity } from "lucide
 
 export const PainPointsSection = () => {
   const painPoints = [
-    { icon: Database, text: "Database overload under concurrent requests" },
-    { icon: Lock, text: "Authentication timeouts during peak traffic" },
-    { icon: Gauge, text: "API throttling and rate-limit failures" },
-    { icon: ListChecks, text: "Queue backups causing delayed processing" },
-    { icon: ShieldAlert, text: "Uncaught rate-limit violations" },
-    { icon: Activity, text: "Memory leaks that appear only at scale" },
+    { icon: Database, text: "Database overload" },
+    { icon: Lock, text: "Auth timeouts" },
+    { icon: Gauge, text: "API throttling" },
+    { icon: ListChecks, text: "Queue backups" },
+    { icon: ShieldAlert, text: "Rate-limit violations" },
+    { icon: Activity, text: "Memory leaks" },
   ];
 
   return (
@@ -34,8 +34,7 @@ export const PainPointsSection = () => {
             <span className="text-inferno-red">until they crash.</span>
           </h2>
           <p className="text-xl text-antique-pearl max-w-3xl mx-auto">
-            Most performance issues only reveal themselves under real load. 
-            By then, it's too late—your users are already experiencing downtime.
+            These issues only appear under real load. By then, your users are already down.
           </p>
         </motion.div>
 
@@ -66,7 +65,7 @@ export const PainPointsSection = () => {
         >
           <div className="inline-block px-6 py-3 rounded-full bg-primary/10 border border-primary/30">
             <p className="text-primary font-semibold">
-              ✨ Obsilab catches these issues before your users do
+              Obsilab catches these before your users do.
             </p>
           </div>
         </motion.div>

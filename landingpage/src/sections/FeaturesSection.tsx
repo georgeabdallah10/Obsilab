@@ -9,32 +9,32 @@ export const FeaturesSection = () => {
     {
       icon: Zap,
       title: "One-click load testing",
-      description: "No scripts, no code. Just paste your endpoint and start testing in seconds. Built for speed and simplicity.",
+      description: "Paste your endpoint. Start testing in seconds. No scripts required.",
     },
     {
       icon: Brain,
-      title: "AI analysis engine",
-      description: "Our AI identifies performance bottlenecks, memory leaks, and database issues—then tells you exactly how to fix them.",
+      title: "AI-powered analysis",
+      description: "Find bottlenecks, memory leaks, and database issues. Get fix recommendations instantly.",
     },
     {
       icon: Globe,
       title: "Auto-scaled global workers",
-      description: "Instantly deploy virtual users across multiple regions. Scale from 100 to 100K+ users without infrastructure hassle.",
+      description: "Deploy 100 to 100K+ VUs across regions. No infrastructure to manage.",
     },
     {
       icon: BarChart3,
-      title: "Real-time metrics dashboard",
-      description: "Watch latency, throughput, error rates, and success metrics update live as your test runs.",
+      title: "Real-time dashboard",
+      description: "Watch latency, throughput, and error rates update live during tests.",
     },
     {
       icon: GitBranch,
       title: "Flow Builder (Pro+)",
-      description: "Design multi-step user flows with authentication, form submissions, and complex API sequences.",
+      description: "Design multi-step user flows with auth, forms, and complex sequences.",
     },
     {
       icon: Shield,
-      title: "Secure Mode (no code access)",
-      description: "Your API keys and backend code stay private. We never access your source code or store credentials.",
+      title: "Secure testing",
+      description: "Your API keys stay private. We never access your source code.",
     },
   ];
 
@@ -56,7 +56,7 @@ export const FeaturesSection = () => {
             Everything you need to test at scale
           </h2>
           <p className="text-xl text-antique-pearl max-w-2xl mx-auto">
-            From simple API tests to complex user flows, Obsilab has you covered
+            Simple API tests to complex user flows — all without writing code
           </p>
         </motion.div>
 
