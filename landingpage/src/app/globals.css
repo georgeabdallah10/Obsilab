@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Obsilab Dark Obsidian Foundation */
+    --obsidian-void: 220 20% 2%;
+    --midnight-abyss: 220 25% 4%;
+    --raven-steel: 220 20% 7%;
+    --carbon-blackened: 220 18% 9%;
+    
+    /* Text Colors */
+    --ivory-quartz: 40 10% 96%;
+    --antique-pearl: 40 5% 80%;
+    --shade-frost: 220 8% 52%;
+    
+    /* Luxury Gold Accents */
+    --gold-24k: 43 59% 55%;
+    --gold-gilded: 43 80% 68%;
+    --gold-imperial: 43 85% 38%;
+    
+    /* Status Colors */
+    --jade-obsidian: 156 73% 43%;
+    --ember-gold: 38 77% 60%;
+    --inferno-red: 0 57% 50%;
+    --azure-smoke: 201 57% 60%;
+    
+    /* Design System Mappings */
+    --background: var(--obsidian-void);
+    --foreground: var(--ivory-quartz);
+    
+    --card: var(--raven-steel);
+    --card-foreground: var(--ivory-quartz);
+    
+    --popover: var(--carbon-blackened);
+    --popover-foreground: var(--ivory-quartz);
+    
+    --primary: var(--gold-24k);
+    --primary-foreground: var(--obsidian-void);
+    
+    --secondary: var(--raven-steel);
+    --secondary-foreground: var(--ivory-quartz);
+    
+    --muted: var(--midnight-abyss);
+    --muted-foreground: var(--shade-frost);
+    
+    --accent: var(--gold-gilded);
+    --accent-foreground: var(--obsidian-void);
+    
+    --destructive: var(--inferno-red);
+    --destructive-foreground: var(--ivory-quartz);
+    
+    --border: 220 15% 15%;
+    --input: var(--raven-steel);
+    --ring: var(--gold-24k);
+    
+    --radius: 0.75rem;
+    
+    /* Glow Effects */
+    --gold-glow: 43 59% 55% / 0.35;
+    --obsidian-glow: 0 0% 100% / 0.05;
+    
+    /* Success/Warning/Error/Info */
+    --success: var(--jade-obsidian);
+    --warning: var(--ember-gold);
+    --error: var(--inferno-red);
+    --info: var(--azure-smoke);
+  }
+}
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --color-obsidian-void: hsl(var(--obsidian-void));
+  --color-midnight-abyss: hsl(var(--midnight-abyss));
+  --color-raven-steel: hsl(var(--raven-steel));
+  --color-carbon-blackened: hsl(var(--carbon-blackened));
+  --color-ivory-quartz: hsl(var(--ivory-quartz));
+  --color-antique-pearl: hsl(var(--antique-pearl));
+  --color-shade-frost: hsl(var(--shade-frost));
+  --color-gold-24k: hsl(var(--gold-24k));
+  --color-gold-gilded: hsl(var(--gold-gilded));
+  --color-gold-imperial: hsl(var(--gold-imperial));
+  --color-jade-obsidian: hsl(var(--jade-obsidian));
+  --color-ember-gold: hsl(var(--ember-gold));
+  --color-inferno-red: hsl(var(--inferno-red));
+  --color-azure-smoke: hsl(var(--azure-smoke));
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-success: hsl(var(--success));
+  --color-warning: hsl(var(--warning));
+  --color-error: hsl(var(--error));
+  --color-info: hsl(var(--info));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --shadow-gold-glow: 0 0 30px hsl(var(--gold-glow));
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Premium Animations */
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--gold-glow));
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--gold-glow)), 0 0 60px hsl(var(--gold-glow));
+    }
+  }
+  
+  .animate-fade-up {
+    animation: fade-up 0.6s ease-out;
+  }
+  
+  .glow-gold {
+    box-shadow: 0 0 30px hsl(var(--gold-glow));
+  }
+  
+  .glow-gold-hover {
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .glow-gold-hover:hover {
+    box-shadow: 0 0 40px hsl(var(--gold-glow)), 0 0 60px hsl(var(--gold-glow));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
