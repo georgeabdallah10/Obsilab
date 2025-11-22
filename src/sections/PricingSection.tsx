@@ -1,21 +1,27 @@
 "use client"
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Card } from "../components/card";
 import { Button } from "../components/button";
-import { Check, Star } from "lucide-react";
+import { Check, ChevronDown } from "lucide-react";
 
 export const PricingSection = () => {
+  const [isAnnual, setIsAnnual] = useState(false);
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
+
   const plans = [
     {
       name: "Free",
-      price: "$0",
-      tagline: "Try Obsilab risk-free",
-      whyThisPlan: "Test your first API in under a minute.",
+      monthlyPrice: 0,
+      annualPrice: 0,
+      description: "Explore the platform",
+      whyText: "Run your first test in under a minute.",
       features: [
         "100 VUs",
         "5 tests/month",
-        "Basic AI insights",
         "5 min duration",
+        "Basic charts",
+        "7-day history",
       ],
       cta: "Start Free",
       ctaSubtext: "No credit card required.",
@@ -23,15 +29,17 @@ export const PricingSection = () => {
     },
     {
       name: "Starter",
-      price: "$19",
-      tagline: "Ship with confidence",
-      whyThisPlan: "Best for solo devs shipping weekly.",
+      monthlyPrice: 19,
+      annualPrice: 190,
+      description: "Ship with confidence",
+      whyText: "For solo devs shipping weekly.",
       features: [
         "1,000 VUs",
         "75 tests/month",
-        "Enhanced AI diagnostics",
         "30 min duration",
         "3 regions",
+        "API access",
+        "30-day history",
       ],
       cta: "Get Started",
       ctaSubtext: "",
@@ -39,33 +47,37 @@ export const PricingSection = () => {
     },
     {
       name: "Pro",
-      price: "$89",
-      tagline: "Built for growing teams",
-      whyThisPlan: "10× the power. Find issues before users do.",
+      monthlyPrice: 89,
+      annualPrice: 890,
+      description: "Production-grade testing",
+      whyText: "Find issues before users do.",
       features: [
         "10,000 VUs",
         "200 tests/month",
-        "Advanced AI insights",
         "60 min duration",
-        "Global regions",
-        "Flow Builder",
+        "10 parallel tests",
+        "All regions",
+        "Webhooks + Slack",
+        "90-day history",
       ],
       cta: "Upgrade to Pro",
-      ctaSubtext: "Chosen by 68% of teams.",
+      ctaSubtext: "Most popular choice.",
       highlighted: true,
     },
     {
       name: "Team",
-      price: "$349",
-      tagline: "Enterprise-ready",
-      whyThisPlan: "For teams with heavy traffic and strict SLAs.",
+      monthlyPrice: 349,
+      annualPrice: 3490,
+      description: "Scale without limits",
+      whyText: "For teams with strict SLAs.",
       features: [
         "100,000+ VUs",
         "1,000 tests/month",
-        "AI Engine Pro",
         "Unlimited duration",
-        "Dedicated support",
-        "10 seats",
+        "Unlimited parallel",
+        "10 seats included",
+        "Private projects",
+        "Priority support",
       ],
       cta: "Contact Sales",
       ctaSubtext: "Custom plans available.",
@@ -73,99 +85,203 @@ export const PricingSection = () => {
     },
   ];
 
-  const testimonials = [
+  const comparisonData = [
     {
-      quote: "We found a 3-second bottleneck in 10 minutes.",
-      author: "Arjun",
-      role: "SaaS Founder",
+      category: "Core Testing",
+      features: [
+        { name: "Basic load tests", free: true, starter: true, pro: true, team: true },
+        { name: "Spike & stress tests", free: false, starter: true, pro: true, team: true },
+        { name: "Test history", free: "7 days", starter: "30 days", pro: "90 days", team: "1 year" },
+        { name: "PDF reports", free: false, starter: true, pro: true, team: true },
+        { name: "Custom configs", free: false, starter: true, pro: true, team: true },
+      ],
     },
     {
-      quote: "Simpler than k6. AI insights are instant.",
-      author: "Michael",
-      role: "Full-stack dev",
+      category: "Speed & Scale",
+      features: [
+        { name: "Virtual users", free: "100", starter: "1K", pro: "10K", team: "100K+" },
+        { name: "Max duration", free: "5 min", starter: "30 min", pro: "60 min", team: "Unlimited" },
+        { name: "Parallel tests", free: "1", starter: "3", pro: "10", team: "Unlimited" },
+        { name: "Regions", free: "1", starter: "3", pro: "All", team: "All" },
+      ],
     },
     {
-      quote: "Upgraded to Pro after day one.",
-      author: "Lindsay",
-      role: "Backend lead",
+      category: "Observability",
+      features: [
+        { name: "Real-time charts", free: true, starter: true, pro: true, team: true },
+        { name: "Error breakdown", free: true, starter: true, pro: true, team: true },
+        { name: "Endpoint insights", free: false, starter: true, pro: true, team: true },
+        { name: "p95/p99 percentiles", free: false, starter: false, pro: true, team: true },
+        { name: "Trend analytics", free: false, starter: false, pro: true, team: true },
+      ],
+    },
+    {
+      category: "Automation",
+      features: [
+        { name: "API access", free: false, starter: true, pro: true, team: true },
+        { name: "GitHub Actions", free: false, starter: true, pro: true, team: true },
+        { name: "Webhooks", free: false, starter: false, pro: true, team: true },
+        { name: "Slack alerts", free: false, starter: false, pro: true, team: true },
+      ],
+    },
+    {
+      category: "Team",
+      features: [
+        { name: "Seats included", free: "1", starter: "1", pro: "5", team: "10" },
+        { name: "Shared reports", free: false, starter: false, pro: true, team: true },
+        { name: "Private projects", free: false, starter: false, pro: false, team: true },
+        { name: "Workspaces", free: false, starter: false, pro: false, team: true },
+      ],
     },
   ];
 
+  const formatPrice = (plan: typeof plans[0]) => {
+    if (plan.monthlyPrice === 0) return "$0";
+    return isAnnual ? `$${plan.annualPrice}` : `$${plan.monthlyPrice}`;
+  };
+
+  const getPeriod = () => {
+    return isAnnual ? "/year" : "/month";
+  };
+
+  const getMonthlyEquivalent = (plan: typeof plans[0]) => {
+    if (!isAnnual || plan.monthlyPrice === 0) return null;
+    const monthly = Math.round(plan.annualPrice / 12);
+    return `$${monthly}/mo`;
+  };
+
+  const renderCell = (value: boolean | string) => {
+    if (typeof value === "boolean") {
+      return value ? (
+        <Check className="w-6 h-6 text-[#7dd3a0] mx-auto" />
+      ) : (
+        <span className="text-neutral-600 w-5 h-5 mx-auto">—</span>
+      );
+    }
+    return <span className="text-neutral-300 text-xl">{value}</span>;
+  };
+
   return (
-    <section id="pricing" className="py-24 bg-gradient-to-b from-midnight-abyss to-obsidian-void">
+    <section id="pricing" className="py-24 bg-gradient-to-b from-[#0a0a0a] to-[#050608]">
       <div className="container mx-auto px-6">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Pricing that scales with you
           </h2>
-          <p className="text-xl text-antique-pearl max-w-2xl mx-auto mb-6">
+          <p className="text-lg text-neutral-400 max-w-xl mx-auto mb-6">
             Start free. Upgrade when you're ready.
           </p>
 
           {/* Trust badges */}
-          <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <span className="flex items-center gap-1.5 text-jade-obsidian">
+          <div className="flex flex-wrap justify-center gap-6 text-sm mb-8">
+            <span className="flex items-center gap-2 text-[#7dd3a0]">
               <Check className="w-4 h-4" /> No credit card required
             </span>
-            <span className="flex items-center gap-1.5 text-jade-obsidian">
+            <span className="flex items-center gap-2 text-[#7dd3a0]">
               <Check className="w-4 h-4" /> Cancel anytime
             </span>
-            <span className="flex items-center gap-1.5 text-jade-obsidian">
+            <span className="flex items-center gap-2 text-[#7dd3a0]">
               <Check className="w-4 h-4" /> No surprise charges
             </span>
           </div>
+
+          {/* Billing Toggle */}
+          <div className="flex justify-center">
+            <div className="inline-flex items-center bg-neutral-900/80 rounded-full p-1 border border-neutral-800">
+              <button
+                onClick={() => setIsAnnual(false)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  !isAnnual
+                    ? "bg-[#D5A743] text-[#050608] shadow-md"
+                    : "text-neutral-400 hover:text-neutral-200"
+                }`}
+              >
+                Monthly
+              </button>
+              <button
+                onClick={() => setIsAnnual(true)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  isAnnual
+                    ? "bg-[#D5A743] text-[#050608] shadow-md"
+                    : "text-neutral-400 hover:text-neutral-200"
+                }`}
+              >
+                Annual <span className={isAnnual ? "text-[#050608]" : "text-[#7dd3a0]"}>-20%</span>
+              </button>
+            </div>
+          </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        {/* Pricing Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-20">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={plan.highlighted ? "lg:-mt-4" : ""}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
             >
               <Card
-                className={`p-8 h-full flex flex-col ${
+                className={`p-8 h-full flex flex-col relative transition-all duration-300 ${
                   plan.highlighted
-                    ? "bg-gradient-to-b from-card via-card to-primary/5 border-primary shadow-[0_0_40px_rgba(213,167,67,0.3)]"
-                    : "bg-card/40 border-border/50"
-                } backdrop-blur-sm transition-all duration-300 hover:scale-105`}
+                    ? "bg-[#0d0d0d] border-[#D5A743]/40 shadow-[0_0_30px_rgba(213,167,67,0.15)]"
+                    : "bg-[#0d0d0d] border-neutral-800"
+                }`}
               >
                 {plan.highlighted && (
-                  <div className="mb-4 -mt-4">
-                    <span className="px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold uppercase">
+                  <div className="mb-4">
+                    <span className="px-3 py-1 rounded bg-[#D5A743] text-[#050608] text-xs font-bold uppercase tracking-wide">
                       Most Popular
                     </span>
                   </div>
                 )}
 
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">{plan.name}</h3>
-                  <p className="text-antique-pearl text-sm italic">{plan.tagline}</p>
+                <div className="mb-5">
+                  <h3 className="text-3xl font-bold text-foreground">{plan.name}</h3>
+                  <p className="text-neutral-500 text-sm mt-2">{plan.description}</p>
                 </div>
 
                 <div className="mb-6">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-bold text-foreground">{plan.price}</span>
-                    <span className="text-shade-frost">/month</span>
-                  </div>
-                  {/* Why this plan */}
-                  <p className="text-jade-obsidian text-xs mt-2">{plan.whyThisPlan}</p>
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={isAnnual ? "annual" : "monthly"}
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.2 }}
+                      className="flex items-baseline gap-1"
+                    >
+                      <span className="text-5xl font-bold text-foreground">
+                        {formatPrice(plan)}
+                      </span>
+                      <span className="text-neutral-500 text-base">{getPeriod()}</span>
+                    </motion.div>
+                  </AnimatePresence>
+                  {getMonthlyEquivalent(plan) && (
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      className="text-[#7dd3a0] text-sm mt-1"
+                    >
+                      {getMonthlyEquivalent(plan)}
+                    </motion.p>
+                  )}
+                  <p className="text-[#D5A743] text-sm mt-3">{plan.whyText}</p>
                 </div>
 
                 <ul className="space-y-3 mb-8 flex-1">
                   {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-jade-obsidian flex-shrink-0 mt-0.5" />
-                      <span className="text-antique-pearl text-sm">{feature}</span>
+                    <li key={feature} className="flex items-center gap-3">
+                      <Check className="w-5 h-5 text-[#7dd3a0] shrink-0" />
+                      <span className="text-neutral-300 text-base">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -173,84 +289,122 @@ export const PricingSection = () => {
                 <Button
                   className={
                     plan.highlighted
-                      ? "w-full bg-gradient-to-r from-primary to-gold-gilded hover:from-gold-gilded hover:to-primary text-primary-foreground font-semibold shadow-[0_0_20px_rgba(213,167,67,0.4)]"
-                      : "w-full bg-muted hover:bg-primary/20 hover:text-primary hover:border-primary/50 text-muted-foreground font-semibold transition-all duration-300 border border-transparent"
+                      ? "w-full bg-[#D5A743] hover:bg-[#c49a3d] text-[#050608] font-semibold"
+                      : "w-full bg-transparent hover:bg-neutral-800 text-neutral-400 font-medium border border-neutral-700"
                   }
                   size="lg"
                 >
                   {plan.cta}
                 </Button>
 
-                {/* CTA Subtext */}
                 {plan.ctaSubtext && (
-                  <p className="text-xs text-shade-frost text-center mt-3">{plan.ctaSubtext}</p>
+                  <p className="text-xs text-neutral-500 text-center mt-3">{plan.ctaSubtext}</p>
                 )}
               </Card>
             </motion.div>
           ))}
         </div>
 
-        {/* Testimonials */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 grid md:grid-cols-3 gap-8 max-w-5xl mx-auto"
-        >
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="text-center">
-              <div className="flex justify-center gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-primary fill-primary" />
-                ))}
-              </div>
-              <p className="text-antique-pearl text-sm italic mb-3">"{testimonial.quote}"</p>
-              <p className="text-shade-frost text-xs">
-                — {testimonial.author}, {testimonial.role}
-              </p>
-            </div>
-          ))}
-        </motion.div>
-
-        {/* Pricing FAQ */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-20 max-w-3xl mx-auto"
-        >
-          <h3 className="text-2xl font-bold text-foreground text-center mb-8">Pricing Questions</h3>
-          <div className="space-y-6">
-            <div className="bg-card/30 backdrop-blur-sm rounded-lg p-6 border border-border/30">
-              <h4 className="font-semibold text-foreground mb-2">Will I get charged if I go over my test limits?</h4>
-              <p className="text-antique-pearl text-sm">Never. We soft-limit tests and notify you when you hit your plan boundaries.</p>
-            </div>
-            <div className="bg-card/30 backdrop-blur-sm rounded-lg p-6 border border-border/30">
-              <h4 className="font-semibold text-foreground mb-2">Can I downgrade anytime?</h4>
-              <p className="text-antique-pearl text-sm">Yes — all changes take effect next billing cycle.</p>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Bottom CTA for hesitant users */}
+        {/* Comparison Table */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16 text-center"
+          transition={{ duration: 0.5 }}
+          className="max-w-7xl mx-auto mt-16"
         >
-          <p className="text-antique-pearl mb-4">
-            Still unsure? <span className="text-primary font-medium">Run a free test in under 10 seconds →</span>
-          </p>
-          <Button
-            className="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30"
-            size="lg"
-          >
-            Try Free Test
-          </Button>
+          <h3 className="text-4xl font-bold text-foreground text-center mb-12">
+            Compare plans
+          </h3>
+
+          {/* Table Header - Always visible */}
+          <div className="overflow-x-auto mb-4 rounded-2xl border-2 border-[#D5A743]/30 bg-gradient-to-r from-[#0d0d0d] via-[#1a1510] to-[#0d0d0d] shadow-[0_0_40px_rgba(213,167,67,0.12)]">
+            <table className="w-full text-xl">
+              <thead>
+                <tr>
+                  <th className="text-left py-6 px-10 text-[#D5A743] font-bold text-2xl w-1/3">Feature</th>
+                  <th className="text-center py-6 px-8 text-neutral-400 font-bold text-2xl">Free</th>
+                  <th className="text-center py-6 px-8 text-[#7dd3a0] font-bold text-2xl">Starter</th>
+                  <th className="text-center py-6 px-8 text-[#D5A743] font-bold text-2xl">Pro</th>
+                  <th className="text-center py-6 px-8 text-[#7dd3a0] font-bold text-2xl">Team</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+
+          {/* Collapsible Sections */}
+          <div className="space-y-4">
+            {comparisonData.map((section) => {
+              const isExpanded = expandedSection === section.category;
+              return (
+                <div
+                  key={section.category}
+                  className={`border-2 rounded-2xl overflow-hidden transition-all duration-300 bg-gradient-to-r from-[#0d0d0d] to-[#0a0a0a] ${
+                    isExpanded
+                      ? "border-[#D5A743]/60 shadow-[0_0_40px_rgba(213,167,67,0.2)]"
+                      : "border-neutral-800 hover:border-neutral-700"
+                  }`}
+                >
+                  <button
+                    onClick={() => setExpandedSection(isExpanded ? null : section.category)}
+                    className={`w-full flex items-center justify-between px-8 py-6 transition-colors duration-200 ${
+                      isExpanded ? "bg-[#D5A743]/10" : "hover:bg-neutral-800/50"
+                    }`}
+                  >
+                    <span className={`text-xl font-bold uppercase tracking-wider transition-colors duration-200 ${
+                      isExpanded ? "text-[#D5A743]" : "text-neutral-400"
+                    }`}>
+                      {section.category}
+                    </span>
+                    <ChevronDown
+                      className={`w-6 h-6 transition-all duration-300 ${
+                        isExpanded ? "rotate-180 text-[#D5A743]" : "text-neutral-500"
+                      }`}
+                    />
+                  </button>
+
+                  <AnimatePresence>
+                    {expandedSection === section.category && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="bg-[#050608]/80 backdrop-blur-sm border-t border-[#D5A743]/10">
+                          <table className="w-full text-xl">
+                            <tbody>
+                              {section.features.map((feature, idx) => (
+                                <tr
+                                  key={feature.name}
+                                  className={`${
+                                    idx < section.features.length - 1 ? "border-b border-[#D5A743]/10" : ""
+                                  } hover:bg-[#D5A743]/5 transition-colors duration-150 text-lg`}
+                                >
+                                  <td className="py-6 px-10 text-neutral-100 w-1/3 font-semibold text-xl">
+                                    {feature.name}
+                                  </td>
+                                  <td className="text-center py-6 px-8 text-xl">{renderCell(feature.free)}</td>
+                                  <td className="text-center py-6 px-8 text-xl">
+                                    {renderCell(feature.starter)}
+                                  </td>
+                                  <td className="text-center py-6 px-8 bg-[#D5A743]/15 text-xl">
+                                    {renderCell(feature.pro)}
+                                  </td>
+                                  <td className="text-center py-6 px-8 text-xl">{renderCell(feature.team)}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
+          </div>
         </motion.div>
       </div>
     </section>
