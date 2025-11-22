@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion";
-import { Card } from "../components/card";
-import { Button } from "../components/button";
+import { Card } from "../../../src/components/card";
+import { Button } from "../../../src/components/button";
 import { Check } from "lucide-react";
 import { useState } from "react";
 
