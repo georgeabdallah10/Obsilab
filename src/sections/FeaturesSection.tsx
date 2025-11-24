@@ -14,7 +14,7 @@ export const FeaturesSection = () => {
     {
       icon: Brain,
       title: "AI-powered analysis",
-      description: "Find bottlenecks, memory leaks, and database issues. Get fix recommendations instantly.",
+      description: "Find bottlenecks, memory leaks, and slow endpoints — with instant fix recommendations.",
     },
     {
       icon: Globe,
@@ -29,7 +29,7 @@ export const FeaturesSection = () => {
     {
       icon: GitBranch,
       title: "Flow Builder (Pro+)",
-      description: "Design multi-step user flows with auth, forms, and complex sequences.",
+      description: "Design multi-step flows without writing scripts.",
     },
     {
       icon: Shield,

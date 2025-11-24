@@ -15,13 +15,13 @@ export const HowItWorksSection = () => {
       icon: Gauge,
       number: "02",
       title: "Set your traffic",
-      description: "Choose 100 to 100,000+ VUs across global regions.",
+      description: "Choose 100–100,000+ VUs across global regions.",
     },
     {
       icon: Lightbulb,
       number: "03",
       title: "Get AI diagnostics",
-      description: "Find bottlenecks, errors, and slowdowns instantly.",
+      description: "Get instant AI diagnostics.",
     },
   ];
 

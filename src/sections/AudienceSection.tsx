@@ -19,12 +19,12 @@ export const AudienceSection = () => {
     {
       icon: Code2,
       title: "API-first companies",
-      description: "Guarantee 99.9% uptime for your API consumers. Find bottlenecks before they become SLA violations.",
+      description: "Guarantee 99.9% uptime. Catch issues before violating SLAs.",
     },
     {
       icon: User,
       title: "Indie developers",
-      description: "Ship with confidence. No complex setup, no DevOps expertise required. Just test your API and deploy.",
+      description: "Ship with confidence. No scripts, no DevOps — just test and deploy.",
     },
   ];
 

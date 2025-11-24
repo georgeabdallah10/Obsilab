@@ -217,6 +217,9 @@ export const PricingSection = () => {
               </button>
             </div>
           </div>
+          <p className="text-sm text-neutral-500 mt-3">
+            Save 20% with annual billing.
+          </p>
         </motion.div>
 
         {/* Pricing Cards */}

@@ -41,9 +41,17 @@ export const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-xl md:text-2xl text-antique-pearl max-w-3xl mx-auto leading-relaxed"
           >
-            Obsilab simulates thousands of virtual users hitting your API at
-            once — then our AI diagnoses bottlenecks and tells you exactly how
-            to fix them.
+            Obsilab simulates thousands of virtual users hitting your API at once — then AI finds bottlenecks and tells you exactly how to fix them.
+          </motion.p>
+
+          {/* Credibility Microline */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="text-sm text-shade-frost"
+          >
+            Trusted by startups, indie devs, and SaaS teams shipping weekly.
           </motion.p>
 
           {/* CTA Buttons */}

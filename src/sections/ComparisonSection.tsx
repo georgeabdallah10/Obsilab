@@ -130,7 +130,7 @@ export const ComparisonSection = () => {
             Why Obsilab <span className="text-[#D5A743]">Wins</span>
           </h2>
           <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
-            See how we compare to the alternatives.
+            See exactly where Obsilab outperforms other load-testing tools.
           </p>
         </motion.div>
 

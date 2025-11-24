@@ -20,7 +20,7 @@ export const DemoPreviewSection = () => {
             See Obsilab in action
           </h2>
           <p className="text-xl text-antique-pearl max-w-2xl mx-auto">
-            Real-time metrics and AI diagnostics during every test
+            See how your API behaves under real load — failures, spikes, and slow endpoints show up instantly.
           </p>
         </motion.div>
 
