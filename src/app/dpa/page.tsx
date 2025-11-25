@@ -9,14 +9,14 @@ export default function DataProcessingAgreement() {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-16 max-w-4xl">
-        <h1 className="text-4xl font-bold mb-2">Data Processing Agreement</h1>
+        <h1 className="text-4xl font-bold mb-2 leading-[1] tracking-[-0.02em] text-[3.052rem]">Data Processing Agreement</h1>
         <p className="text-muted-foreground mb-8">Last Updated: November 24, 2025</p>
 
         <div className="prose prose-gray dark:prose-invert max-w-none space-y-8">
 
           {/* 1. Introduction & Purpose */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">1. Introduction & Purpose</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">1. Introduction & Purpose</h2>
             <p>
               This Data Processing Agreement (&quot;DPA&quot;) governs the processing of personal data by Obsilab on behalf of the Customer in connection with the Services.
             </p>
@@ -34,7 +34,7 @@ export default function DataProcessingAgreement() {
 
           {/* 2. Definitions */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">2. Definitions</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">2. Definitions</h2>
             <ul className="list-disc pl-6 space-y-3">
               <li>
                 <strong>&quot;Personal Data&quot;</strong> means any information relating to an identified or identifiable natural person.
@@ -65,7 +65,7 @@ export default function DataProcessingAgreement() {
 
           {/* 3. Scope of Processing */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">3. Scope of Processing</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">3. Scope of Processing</h2>
             <p>
               Obsilab processes the following categories of Personal Data:
             </p>
@@ -90,7 +90,7 @@ export default function DataProcessingAgreement() {
 
           {/* 4. Responsibilities of the Controller (User) */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">4. Responsibilities of the Controller</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">4. Responsibilities of the Controller</h2>
             <p>As the Controller, you are responsible for:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Ensuring you have a lawful basis for providing Personal Data to Obsilab</li>
@@ -103,7 +103,7 @@ export default function DataProcessingAgreement() {
 
           {/* 5. Responsibilities of the Processor (Obsilab) */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">5. Responsibilities of the Processor</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">5. Responsibilities of the Processor</h2>
             <p>As the Processor, Obsilab commits to:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Process Personal Data only based on your documented instructions and as necessary to provide the Services</li>
@@ -118,7 +118,7 @@ export default function DataProcessingAgreement() {
 
           {/* 6. Sub-Processors */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">6. Sub-Processors</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">6. Sub-Processors</h2>
             <p>
               Obsilab uses the following Sub-processors to provide the Services:
             </p>
@@ -141,7 +141,7 @@ export default function DataProcessingAgreement() {
 
           {/* 7. International Data Transfers */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">7. International Data Transfers</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">7. International Data Transfers</h2>
             <p>
               Obsilab is based in the United States. Personal Data may be transferred to and processed in the US or other countries where our Sub-processors operate.
             </p>
@@ -159,7 +159,7 @@ export default function DataProcessingAgreement() {
 
           {/* 8. Security Measures */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">8. Security Measures</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">8. Security Measures</h2>
             <p>
               Obsilab implements the following technical and organizational measures to protect Personal Data:
             </p>
@@ -177,7 +177,7 @@ export default function DataProcessingAgreement() {
 
           {/* 9. Data Subject Rights */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">9. Data Subject Rights</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">9. Data Subject Rights</h2>
             <p>
               Obsilab will assist you in fulfilling your obligations to respond to Data Subject requests, including:
             </p>
@@ -195,7 +195,7 @@ export default function DataProcessingAgreement() {
 
           {/* 10. Data Breach Notification */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">10. Data Breach Notification</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">10. Data Breach Notification</h2>
             <p>
               In the event of a Personal Data breach, Obsilab will:
             </p>
@@ -212,7 +212,7 @@ export default function DataProcessingAgreement() {
 
           {/* 11. Data Retention & Deletion */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">11. Data Retention & Deletion</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">11. Data Retention & Deletion</h2>
             <p>
               Obsilab retains Personal Data only as long as necessary to provide the Services:
             </p>
@@ -232,7 +232,7 @@ export default function DataProcessingAgreement() {
 
           {/* 12. Audits & Compliance */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">12. Audits & Compliance</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">12. Audits & Compliance</h2>
             <p>
               Obsilab supports your compliance efforts through:
             </p>
@@ -248,7 +248,7 @@ export default function DataProcessingAgreement() {
 
           {/* 13. Liability */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">13. Liability</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">13. Liability</h2>
             <p>
               Liability under this DPA is subject to the limitations set forth in the Obsilab Terms of Service.
             </p>
@@ -261,7 +261,7 @@ export default function DataProcessingAgreement() {
 
           {/* 14. Term & Termination */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">14. Term & Termination</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">14. Term & Termination</h2>
             <p>
               This DPA remains in effect for the duration of your use of the Services and terminates upon deletion of your account.
             </p>
@@ -277,7 +277,7 @@ export default function DataProcessingAgreement() {
 
           {/* 15. Contact & Governing Law */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">15. Contact & Governing Law</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">15. Contact & Governing Law</h2>
             <p>
               This DPA is governed by the laws of the State of Delaware, USA, without regard to conflict of law principles.
             </p>

@@ -35,10 +35,10 @@ export const HowItWorksSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-[1.1] text-[2.441rem] md:text-[3.052rem]">
             Load test any API in 3 steps
           </h2>
-          <p className="text-xl text-antique-pearl max-w-2xl mx-auto">
+          <p className="text-xl text-antique-pearl max-w-2xl mx-auto leading-[1.5]">
             From zero to stress-tested in under a minute
           </p>
         </motion.div>
@@ -66,10 +66,10 @@ export const HowItWorksSection = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-2xl font-bold text-foreground mb-4 tracking-[-0.015em] text-[1.953rem]">
                   {step.title}
                 </h3>
-                <p className="text-antique-pearl leading-relaxed">
+                <p className="text-antique-pearl leading-[1.5]">
                   {step.description}
                 </p>
               </Card>

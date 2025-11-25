@@ -16,10 +16,10 @@ export const DemoPreviewSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-[1.1] text-[2.441rem] md:text-[3.052rem]">
             See Obsilab in action
           </h2>
-          <p className="text-xl text-antique-pearl max-w-2xl mx-auto">
+          <p className="text-xl text-antique-pearl max-w-2xl mx-auto leading-[1.5]">
             See how your API behaves under real load — failures, spikes, and slow endpoints show up instantly.
           </p>
         </motion.div>
@@ -64,7 +64,7 @@ export const DemoPreviewSection = () => {
 
             {/* Latency Graph Placeholder */}
             <div className="bg-midnight-abyss/50 rounded-xl p-8 border border-border/30 mb-8">
-              <h4 className="text-sm font-medium text-shade-frost mb-6">Latency Over Time</h4>
+              <h4 className="text-sm font-medium text-shade-frost mb-6 leading-[1.3] text-[1.563rem]">Latency Over Time</h4>
               <div className="h-48 flex items-end justify-between gap-2">
                 {[45, 52, 38, 65, 48, 42, 58, 44, 39, 50, 46, 41, 55, 43, 38, 47, 44, 40, 52, 45].map(
                   (height, i) => (
@@ -93,8 +93,8 @@ export const DemoPreviewSection = () => {
                   <span className="text-xl">🤖</span>
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-lg font-bold text-foreground mb-2">AI Insight</h4>
-                  <p className="text-antique-pearl mb-3">
+                  <h4 className="text-lg font-bold text-foreground mb-2 leading-[1.3] text-[1.563rem]">AI Insight</h4>
+                  <p className="text-antique-pearl mb-3 leading-[1.5]">
                     Database connection pool saturated at 500 concurrent users — recommend increasing pool size or adding read replicas.
                   </p>
                   <div className="flex gap-2">

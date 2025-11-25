@@ -23,7 +23,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight"
+            className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1] tracking-[-0.02em] text-[3.052rem] md:text-[3.815rem] lg:text-[4.768rem]"
           >
             <span className="bg-linear-to-r from-ivory-quartz via-antique-pearl to-ivory-quartz bg-clip-text text-transparent">
               Stress-test your backend
@@ -39,7 +39,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-xl md:text-2xl text-antique-pearl max-w-3xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-antique-pearl max-w-3xl mx-auto leading-[1.5]"
           >
             Obsilab simulates thousands of virtual users hitting your API at once — then AI finds bottlenecks and tells you exactly how to fix them.
           </motion.p>
@@ -49,7 +49,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="text-sm text-shade-frost"
+            className="text-sm text-shade-frost leading-[1.5]"
           >
             Trusted by startups, indie devs, and SaaS teams shipping weekly.
           </motion.p>
@@ -99,22 +99,22 @@ export const HeroSection = () => {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 1.2 }}
-              className="absolute -left-4 top-1/4 bg-card/90 backdrop-blur-sm border border-primary/30 rounded-lg p-4 shadow-2xl"
-            >
-              <p className="text-shade-frost text-sm">Latency</p>
-              <p className="text-2xl font-bold text-jade-obsidian">12ms</p>
-            </motion.div>
+            transition={{ duration: 0.7, delay: 1.2 }}
+            className="absolute -left-4 top-1/4 bg-card/90 backdrop-blur-sm border border-primary/30 rounded-lg p-4 shadow-2xl"
+          >
+            <p className="text-shade-frost text-sm leading-[1.5]">Latency</p>
+            <p className="text-2xl font-bold text-jade-obsidian leading-[1.5]">12ms</p>
+          </motion.div>
 
-            <motion.div
+          <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 1.4 }}
-              className="absolute -right-4 top-1/3 bg-card/90 backdrop-blur-sm border border-primary/30 rounded-lg p-4 shadow-2xl"
-            >
-              <p className="text-shade-frost text-sm">Virtual Users</p>
-              <p className="text-2xl font-bold text-primary">10,000</p>
-            </motion.div>
+            transition={{ duration: 0.7, delay: 1.4 }}
+            className="absolute -right-4 top-1/3 bg-card/90 backdrop-blur-sm border border-primary/30 rounded-lg p-4 shadow-2xl"
+          >
+            <p className="text-shade-frost text-sm leading-[1.5]">Virtual Users</p>
+            <p className="text-2xl font-bold text-primary leading-[1.5]">10,000</p>
+          </motion.div>
           </motion.div>
         </div>
       </div>

@@ -21,12 +21,12 @@ export default function TeamPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1] tracking-[-0.02em] text-[3.052rem] md:text-[3.815rem] lg:text-[4.768rem]">
             <span className="bg-gradient-to-r from-primary via-gold-gilded to-primary bg-clip-text text-transparent">
               Our Team
             </span>
           </h1>
-          <p className="text-antique-pearl text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="text-antique-pearl text-lg md:text-xl max-w-2xl mx-auto leading-[1.5]">
             Meet the people behind Obsilab who are passionate about revolutionizing API testing.
           </p>
         </motion.div>
@@ -48,7 +48,7 @@ export default function TeamPage() {
 
             {/* Name & Title */}
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-foreground mb-2">
+              <h2 className="text-2xl font-bold text-foreground mb-2 leading-[1.1] text-[2.441rem]">
                 George Abdallah
               </h2>
               <div className="flex items-center justify-center gap-2 mb-3">
@@ -57,7 +57,7 @@ export default function TeamPage() {
                   Engineer
                 </Badge>
               </div>
-              <p className="text-antique-pearl text-sm leading-relaxed">
+              <p className="text-antique-pearl text-sm leading-[1.5]">
                 Passionate engineer dedicated to building tools that make API testing seamless and intelligent for developers worldwide.
               </p>
             </div>

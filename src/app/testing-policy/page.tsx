@@ -9,14 +9,14 @@ export default function TestingPolicy() {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-16 max-w-4xl">
-        <h1 className="text-4xl font-bold mb-2">Responsible Testing Policy</h1>
+        <h1 className="text-4xl font-bold mb-2 leading-[1] tracking-[-0.02em] text-[3.052rem]">Responsible Testing Policy</h1>
         <p className="text-muted-foreground mb-8">Last Updated: November 24, 2025</p>
 
         <div className="prose prose-gray dark:prose-invert max-w-none space-y-8">
 
           {/* 1. Purpose of This Policy */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">1. Purpose of This Policy</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">1. Purpose of This Policy</h2>
             <p>
               This Responsible Testing Policy exists to:
             </p>
@@ -33,7 +33,7 @@ export default function TestingPolicy() {
 
           {/* 2. User Responsibility & Ownership Requirements */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">2. User Responsibility & Ownership Requirements</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">2. User Responsibility & Ownership Requirements</h2>
             <p className="font-semibold">
               You may only use Obsilab to test systems you own, operate, or have explicit written permission to test.
             </p>
@@ -47,7 +47,7 @@ export default function TestingPolicy() {
 
           {/* 3. Prohibited Activities */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">3. Prohibited Activities</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">3. Prohibited Activities</h2>
             <p>The following activities are strictly forbidden:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Testing any target without proper authorization or consent</li>
@@ -63,7 +63,7 @@ export default function TestingPolicy() {
 
           {/* 4. Rate Limits & Traffic Safety */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">4. Rate Limits & Traffic Safety</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">4. Rate Limits & Traffic Safety</h2>
             <p>
               To maintain platform stability and prevent abuse:
             </p>
@@ -78,7 +78,7 @@ export default function TestingPolicy() {
 
           {/* 5. Required Permissions for Third-Party Targets */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">5. Required Permissions for Third-Party Targets</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">5. Required Permissions for Third-Party Targets</h2>
             <p>
               If you are testing systems owned by third parties (such as client or customer systems):
             </p>
@@ -92,7 +92,7 @@ export default function TestingPolicy() {
 
           {/* 6. Data Handling & Test Content Restrictions */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">6. Data Handling & Test Content Restrictions</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">6. Data Handling & Test Content Restrictions</h2>
             <p>
               To protect privacy and security:
             </p>
@@ -106,7 +106,7 @@ export default function TestingPolicy() {
 
           {/* 7. Legal Compliance */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">7. Legal Compliance</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">7. Legal Compliance</h2>
             <p>
               Users must comply with all applicable local, federal, and international laws when using Obsilab.
             </p>
@@ -125,7 +125,7 @@ export default function TestingPolicy() {
 
           {/* 8. Violations & Enforcement */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">8. Violations & Enforcement</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">8. Violations & Enforcement</h2>
             <p>
               We take policy violations seriously and enforce this policy through:
             </p>
@@ -140,7 +140,7 @@ export default function TestingPolicy() {
 
           {/* 9. Reporting Abuse */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">9. Reporting Abuse</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">9. Reporting Abuse</h2>
             <p>
               If you believe someone is using Obsilab to conduct unauthorized testing against your systems, or if you witness abuse of the platform:
             </p>
@@ -158,7 +158,7 @@ export default function TestingPolicy() {
 
           {/* 10. Updates to This Policy */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">10. Updates to This Policy</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">10. Updates to This Policy</h2>
             <p>
               We may update this Responsible Testing Policy as laws change or as we add new platform features. When we make significant changes, we will notify users through email or platform notifications.
             </p>

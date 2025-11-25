@@ -9,14 +9,14 @@ export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-16 max-w-4xl">
-        <h1 className="text-4xl font-bold mb-2">Privacy Policy</h1>
+        <h1 className="text-4xl font-bold mb-2 leading-[1] tracking-[-0.02em] text-[3.052rem]">Privacy Policy</h1>
         <p className="text-muted-foreground mb-8">Last Updated: November 24, 2025</p>
 
         <div className="prose prose-gray dark:prose-invert max-w-none space-y-8">
 
           {/* 1. Overview */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">1. Overview</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">1. Overview</h2>
             <p>
               Obsilab is a cloud-based API load-testing platform that simulates virtual users, performs distributed load tests, and provides AI-powered diagnostics to help developers optimize their applications.
             </p>
@@ -27,9 +27,9 @@ export default function PrivacyPolicy() {
 
           {/* 2. Information We Collect */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">2. Information We Collect</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">2. Information We Collect</h2>
 
-            <h3 className="text-xl font-medium mt-6 mb-3">A. Account Information</h3>
+            <h3 className="text-xl font-medium mt-6 mb-3 tracking-[-0.015em] text-[1.953rem]">A. Account Information</h3>
             <p>When you create an account, we collect:</p>
             <ul className="list-disc pl-6 space-y-1">
               <li>Email address</li>
@@ -37,12 +37,12 @@ export default function PrivacyPolicy() {
               <li>Name (if provided)</li>
             </ul>
 
-            <h3 className="text-xl font-medium mt-6 mb-3">B. Billing Information</h3>
+            <h3 className="text-xl font-medium mt-6 mb-3 tracking-[-0.015em] text-[1.953rem]">B. Billing Information</h3>
             <p>
               Payment processing is handled securely by Stripe. Obsilab does not store credit card numbers or full payment details. We only receive confirmation of payment status and basic transaction records.
             </p>
 
-            <h3 className="text-xl font-medium mt-6 mb-3">C. Usage Data</h3>
+            <h3 className="text-xl font-medium mt-6 mb-3 tracking-[-0.015em] text-[1.953rem]">C. Usage Data</h3>
             <p>We collect metadata about your tests, including:</p>
             <ul className="list-disc pl-6 space-y-1">
               <li>Test configurations (number of virtual users, duration, target endpoints)</li>
@@ -55,7 +55,7 @@ export default function PrivacyPolicy() {
               Important: Obsilab does NOT store API response bodies, request payloads, or your private source code. We only process the metadata necessary to display your test results and generate insights.
             </p>
 
-            <h3 className="text-xl font-medium mt-6 mb-3">D. Device & Technical Data</h3>
+            <h3 className="text-xl font-medium mt-6 mb-3 tracking-[-0.015em] text-[1.953rem]">D. Device & Technical Data</h3>
             <p>We automatically collect:</p>
             <ul className="list-disc pl-6 space-y-1">
               <li>IP address</li>
@@ -68,7 +68,7 @@ export default function PrivacyPolicy() {
 
           {/* 3. How We Use the Information */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">3. How We Use Your Information</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">3. How We Use Your Information</h2>
             <p>We use the information we collect to:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Execute and manage your load tests</li>
@@ -86,7 +86,7 @@ export default function PrivacyPolicy() {
 
           {/* 4. AI Diagnostics */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">4. AI Diagnostics</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">4. AI Diagnostics</h2>
             <p>Obsilab provides AI-powered diagnostic insights to help you understand test results. Regarding AI processing:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>AI analysis operates on test metadata (response times, error rates, patterns)  not on API response bodies</li>
@@ -98,20 +98,20 @@ export default function PrivacyPolicy() {
 
           {/* 5. Data Sharing */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">5. Data Sharing</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">5. Data Sharing</h2>
             <p>
               We do not sell your personal data. We only share data with trusted third-party service providers necessary to operate the platform:
             </p>
 
-            <h3 className="text-lg font-medium mt-4 mb-2">Payment Processing</h3>
+            <h3 className="text-lg font-medium mt-4 mb-2 tracking-[-0.015em] text-[1.953rem]">Payment Processing</h3>
             <p>Stripe processes all payments securely.</p>
 
-            <h3 className="text-lg font-medium mt-4 mb-2">Cloud Infrastructure</h3>
+            <h3 className="text-lg font-medium mt-4 mb-2 tracking-[-0.015em] text-[1.953rem]">Cloud Infrastructure</h3>
             <p>
               We use cloud providers (such as AWS, DigitalOcean, Fly.io, or similar) to host our platform and execute distributed load tests.
             </p>
 
-            <h3 className="text-lg font-medium mt-4 mb-2">Analytics & Error Monitoring</h3>
+            <h3 className="text-lg font-medium mt-4 mb-2 tracking-[-0.015em] text-[1.953rem]">Analytics & Error Monitoring</h3>
             <p>
               We use tools like Sentry and Logtail for error tracking and operational monitoring.
             </p>
@@ -123,7 +123,7 @@ export default function PrivacyPolicy() {
 
           {/* 6. How Test Traffic Works */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">6. How Test Traffic Works</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">6. How Test Traffic Works</h2>
             <p>Understanding how Obsilab handles test traffic:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Load tests generate synthetic HTTP traffic from distributed workers</li>
@@ -136,7 +136,7 @@ export default function PrivacyPolicy() {
 
           {/* 7. Cookies */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">7. Cookies</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">7. Cookies</h2>
             <p>Obsilab uses cookies for:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Authentication and session management</li>
@@ -150,7 +150,7 @@ export default function PrivacyPolicy() {
 
           {/* 8. Data Retention */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">8. Data Retention</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">8. Data Retention</h2>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Account information:</strong> Retained while your account is active</li>
               <li><strong>Test metadata and results:</strong> Retained for 730 days depending on your subscription plan</li>
@@ -161,7 +161,7 @@ export default function PrivacyPolicy() {
 
           {/* 9. Security */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">9. Security</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">9. Security</h2>
             <p>We implement industry-standard security measures to protect your data:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>All data transmitted over HTTPS (encryption in transit)</li>
@@ -178,7 +178,7 @@ export default function PrivacyPolicy() {
 
           {/* 10. User Rights */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">10. Your Rights</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">10. Your Rights</h2>
             <p>You have the following rights regarding your data:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
@@ -198,7 +198,7 @@ export default function PrivacyPolicy() {
 
           {/* 11. Children's Privacy */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">11. Children&apos;s Privacy</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">11. Children&apos;s Privacy</h2>
             <p>
               Obsilab is not intended for use by anyone under the age of 13. We do not knowingly collect personal information from children under 13. If we learn that we have collected such information, we will delete it promptly.
             </p>
@@ -206,7 +206,7 @@ export default function PrivacyPolicy() {
 
           {/* 12. International Transfers */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">12. International Data Transfers</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">12. International Data Transfers</h2>
             <p>
               Obsilab is based in the United States. Your data may be processed in the US or other regions where our infrastructure or service providers operate. This includes regions necessary for distributed load-testing execution.
             </p>
@@ -217,7 +217,7 @@ export default function PrivacyPolicy() {
 
           {/* 13. Changes to This Policy */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">13. Changes to This Policy</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">13. Changes to This Policy</h2>
             <p>
               We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. When we make changes, we will update the &quot;Last Updated&quot; date at the top of this page.
             </p>
@@ -228,7 +228,7 @@ export default function PrivacyPolicy() {
 
           {/* 14. Contact Us */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">14. Contact Us</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">14. Contact Us</h2>
             <p>
               If you have questions about this Privacy Policy or how we handle your data, please contact us at:
             </p>

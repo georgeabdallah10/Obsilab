@@ -126,10 +126,10 @@ export const ComparisonSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-[1.1] text-[2.441rem] md:text-[3.052rem]">
             Why Obsilab <span className="text-[#D5A743]">Wins</span>
           </h2>
-          <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
+          <p className="text-xl text-neutral-400 max-w-2xl mx-auto leading-[1.5]">
             See exactly where Obsilab outperforms other load-testing tools.
           </p>
         </motion.div>
@@ -204,7 +204,7 @@ export const ComparisonSection = () => {
           <div className="rounded-2xl border-2 border-[#D5A743]/40 bg-gradient-to-r from-[#1a1510] to-[#0d0d0d] p-8">
             <div className="flex items-center gap-3 mb-6">
               <Zap className="w-6 h-6 text-[#D5A743]" />
-              <h3 className="text-2xl font-bold text-[#D5A743]">Why Obsilab</h3>
+              <h3 className="text-2xl font-bold text-[#D5A743] tracking-[-0.015em] text-[1.953rem]">Why Obsilab</h3>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {uniqueAdvantages.map((advantage, idx) => (
@@ -232,7 +232,7 @@ export const ComparisonSection = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mt-12 text-center"
         >
-          <p className="text-xl md:text-2xl font-semibold text-neutral-300 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl font-semibold text-neutral-300 max-w-3xl mx-auto leading-[1.5]">
             Stop writing scripts. Stop managing infrastructure.{" "}
             <span className="text-[#D5A743]">Start testing.</span>
           </p>

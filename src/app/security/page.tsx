@@ -9,14 +9,14 @@ export default function Security() {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-16 max-w-4xl">
-        <h1 className="text-4xl font-bold mb-2">Security</h1>
+        <h1 className="text-4xl font-bold mb-2 leading-[1] tracking-[-0.02em] text-[3.052rem]">Security</h1>
         <p className="text-muted-foreground mb-8">How we protect your data and ensure safe testing</p>
 
         <div className="prose prose-gray dark:prose-invert max-w-none space-y-8">
 
           {/* 1. Security Overview */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">1. Security Overview</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">1. Security Overview</h2>
             <p>
               At Obsilab, security is foundational to how we build and operate our platform. We designed our architecture with the following principles:
             </p>
@@ -30,7 +30,7 @@ export default function Security() {
 
           {/* 2. Data Protection & Privacy */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">2. Data Protection & Privacy</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">2. Data Protection & Privacy</h2>
             <p>We implement multiple layers of protection for your data:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Encryption at rest:</strong> All databases are encrypted using AES-256</li>
@@ -44,7 +44,7 @@ export default function Security() {
 
           {/* 3. Worker Isolation & Test Execution Security */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">3. Worker Isolation & Test Execution Security</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">3. Worker Isolation & Test Execution Security</h2>
             <p>
               Our distributed workers are designed for security and isolation:
             </p>
@@ -60,7 +60,7 @@ export default function Security() {
 
           {/* 4. Responsible Testing & Abuse Prevention */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">4. Responsible Testing & Abuse Prevention</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">4. Responsible Testing & Abuse Prevention</h2>
             <p>
               We actively prevent misuse of our platform:
             </p>
@@ -75,7 +75,7 @@ export default function Security() {
 
           {/* 5. Infrastructure Security */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">5. Infrastructure Security</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">5. Infrastructure Security</h2>
             <p>
               Our cloud infrastructure follows security best practices:
             </p>
@@ -90,7 +90,7 @@ export default function Security() {
 
           {/* 6. Application Security */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">6. Application Security</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">6. Application Security</h2>
             <p>
               The Obsilab application is built with security in mind:
             </p>
@@ -105,7 +105,7 @@ export default function Security() {
 
           {/* 7. Data Retention & Deletion */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">7. Data Retention & Deletion</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">7. Data Retention & Deletion</h2>
             <p>
               We retain only what&apos;s necessary and respect your right to delete:
             </p>
@@ -119,7 +119,7 @@ export default function Security() {
 
           {/* 8. Compliance & Best Practices */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">8. Compliance & Best Practices</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">8. Compliance & Best Practices</h2>
             <p>
               We follow industry standards and regulatory guidelines:
             </p>
@@ -133,7 +133,7 @@ export default function Security() {
 
           {/* 9. Vulnerability Disclosure Program */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">9. Vulnerability Disclosure</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">9. Vulnerability Disclosure</h2>
             <p>
               We value the security research community and welcome responsible disclosure of vulnerabilities.
             </p>
@@ -154,7 +154,7 @@ export default function Security() {
 
           {/* 10. Contact */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">10. Contact</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">10. Contact</h2>
             <p>
               For security-related questions, concerns, or to report a vulnerability, please contact us:
             </p>

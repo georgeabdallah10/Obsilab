@@ -20,14 +20,14 @@ export const FinalCTASection = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-4xl mx-auto space-y-8"
         >
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-[2.441rem] md:text-[3.052rem] lg:text-[3.815rem]">
             <span className="text-foreground">Your backend has a </span>
             <span className="bg-gradient-to-r from-inferno-red via-ember-gold to-inferno-red bg-clip-text text-transparent">
               breaking point.
             </span>
           </h2>
 
-          <p className="text-2xl md:text-3xl text-antique-pearl font-light">
+          <p className="text-2xl md:text-3xl text-antique-pearl font-light leading-[1.5]">
             Find it before your customers do.
           </p>
 
@@ -48,7 +48,7 @@ export const FinalCTASection = () => {
             </Button>
           </div>
 
-          <p className="text-shade-frost text-sm pt-4">
+          <p className="text-shade-frost text-sm pt-4 leading-[1.5]">
             No credit card required • 5-minute setup • Cancel anytime
           </p>
         </motion.div>

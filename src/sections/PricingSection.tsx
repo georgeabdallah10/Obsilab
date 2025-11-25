@@ -172,10 +172,10 @@ export const PricingSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-[1.1] text-[2.441rem] md:text-[3.052rem]">
             Pricing that scales with you
           </h2>
-          <p className="text-lg text-neutral-400 max-w-xl mx-auto mb-6">
+          <p className="text-lg text-neutral-400 max-w-xl mx-auto mb-6 leading-[1.5]">
             Start free. Upgrade when you're ready.
           </p>
 
@@ -217,9 +217,7 @@ export const PricingSection = () => {
               </button>
             </div>
           </div>
-          <p className="text-sm text-neutral-500 mt-3">
-            Save 20% with annual billing.
-          </p>
+
         </motion.div>
 
         {/* Pricing Cards */}
@@ -248,8 +246,10 @@ export const PricingSection = () => {
                 )}
 
                 <div className="mb-5">
-                  <h3 className="text-3xl font-bold text-foreground">{plan.name}</h3>
-                  <p className="text-neutral-500 text-sm mt-2">{plan.description}</p>
+                  <h3 className="text-3xl font-bold text-foreground tracking-[-0.015em] text-[1.953rem]">
+                    {plan.name}
+                  </h3>
+                  <p className="text-neutral-500 text-sm mt-2 leading-[1.5]">{plan.description}</p>
                 </div>
 
                 <div className="mb-6">
@@ -265,19 +265,19 @@ export const PricingSection = () => {
                       <span className="text-5xl font-bold text-foreground">
                         {formatPrice(plan)}
                       </span>
-                      <span className="text-neutral-500 text-base">{getPeriod()}</span>
+                      <span className="text-neutral-500 text-base leading-[1.5]">{getPeriod()}</span>
                     </motion.div>
                   </AnimatePresence>
                   {getMonthlyEquivalent(plan) && (
                     <motion.p
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      className="text-[#7dd3a0] text-sm mt-1"
+                      className="text-[#7dd3a0] text-sm mt-1 leading-[1.5]"
                     >
                       {getMonthlyEquivalent(plan)}
                     </motion.p>
                   )}
-                  <p className="text-[#D5A743] text-sm mt-3">{plan.whyText}</p>
+                  <p className="text-[#D5A743] text-sm mt-3 leading-[1.5]">{plan.whyText}</p>
                 </div>
 
                 <ul className="space-y-3 mb-8 flex-1">
@@ -301,7 +301,7 @@ export const PricingSection = () => {
                 </Button>
 
                 {plan.ctaSubtext && (
-                  <p className="text-xs text-neutral-500 text-center mt-3">{plan.ctaSubtext}</p>
+                  <p className="text-xs text-neutral-500 text-center mt-3 leading-[1.5]">{plan.ctaSubtext}</p>
                 )}
               </Card>
             </motion.div>
@@ -316,7 +316,7 @@ export const PricingSection = () => {
           transition={{ duration: 0.5 }}
           className="max-w-7xl mx-auto mt-16"
         >
-          <h3 className="text-4xl font-bold text-foreground text-center mb-12">
+          <h3 className="text-4xl font-bold text-foreground text-center mb-12 tracking-[-0.015em] text-[1.953rem]">
             Compare plans
           </h3>
 

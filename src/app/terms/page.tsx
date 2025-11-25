@@ -9,14 +9,14 @@ export default function TermsOfService() {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-16 max-w-4xl">
-        <h1 className="text-4xl font-bold mb-2">Terms of Service</h1>
+        <h1 className="text-4xl font-bold mb-2 leading-[1] tracking-[-0.02em] text-[3.052rem]">Terms of Service</h1>
         <p className="text-muted-foreground mb-8">Last Updated: November 24, 2025</p>
 
         <div className="prose prose-gray dark:prose-invert max-w-none space-y-8">
 
           {/* 1. Acceptance of Terms */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">1. Acceptance of Terms</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">1. Acceptance of Terms</h2>
             <p>
               By accessing or using Obsilab, you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use the Service.
             </p>
@@ -27,7 +27,7 @@ export default function TermsOfService() {
 
           {/* 2. Eligibility */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">2. Eligibility</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">2. Eligibility</h2>
             <p>To use Obsilab, you must:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Be at least 13 years of age</li>
@@ -39,7 +39,7 @@ export default function TermsOfService() {
 
           {/* 3. Use of Service */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">3. Use of Service</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">3. Use of Service</h2>
             <p>
               <strong>You may only use Obsilab to test systems you own or have explicit written authorization to test.</strong>
             </p>
@@ -60,7 +60,7 @@ export default function TermsOfService() {
 
           {/* 4. Accounts */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">4. Accounts</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">4. Accounts</h2>
             <p>
               You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.
             </p>
@@ -74,7 +74,7 @@ export default function TermsOfService() {
 
           {/* 5. Subscription Plans, Billing & Refunds */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">5. Subscription Plans, Billing & Refunds</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">5. Subscription Plans, Billing & Refunds</h2>
             <p>
               Obsilab operates on a subscription basis with recurring billing. By subscribing, you authorize us to charge your payment method on a recurring basis until you cancel.
             </p>
@@ -89,7 +89,7 @@ export default function TermsOfService() {
 
           {/* 6. Load Testing Traffic & Resource Usage */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">6. Load Testing Traffic & Resource Usage</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">6. Load Testing Traffic & Resource Usage</h2>
             <p>
               Obsilab generates high-volume synthetic traffic to simulate virtual users and perform distributed load tests. You acknowledge and agree that:
             </p>
@@ -103,7 +103,7 @@ export default function TermsOfService() {
 
           {/* 7. API Content & Test Data */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">7. API Content & Test Data</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">7. API Content & Test Data</h2>
             <p>
               Our distributed workers do not permanently store test payloads or API response content.
             </p>
@@ -122,7 +122,7 @@ export default function TermsOfService() {
 
           {/* 8. AI Diagnostics */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">8. AI Diagnostics</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">8. AI Diagnostics</h2>
             <p>
               Obsilab provides AI-powered diagnostic insights based on your test results. These insights are:
             </p>
@@ -138,7 +138,7 @@ export default function TermsOfService() {
 
           {/* 9. Termination */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">9. Termination</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">9. Termination</h2>
             <p>
               We may suspend or terminate your account immediately, without notice, for any violation of these terms or at our sole discretion.
             </p>
@@ -152,7 +152,7 @@ export default function TermsOfService() {
 
           {/* 10. Intellectual Property */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">10. Intellectual Property</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">10. Intellectual Property</h2>
             <p>
               Obsilab and its licensors own all rights, title, and interest in the Service, including all software, code, UI, branding, trademarks, and documentation.
             </p>
@@ -170,7 +170,7 @@ export default function TermsOfService() {
 
           {/* 11. Disclaimers of Warranties */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">11. Disclaimers of Warranties</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">11. Disclaimers of Warranties</h2>
             <p className="uppercase font-semibold">
               THE SERVICE IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED.
             </p>
@@ -189,7 +189,7 @@ export default function TermsOfService() {
 
           {/* 12. Limitation of Liability */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">12. Limitation of Liability</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">12. Limitation of Liability</h2>
             <p className="uppercase font-semibold">
               TO THE MAXIMUM EXTENT PERMITTED BY LAW:
             </p>
@@ -209,7 +209,7 @@ export default function TermsOfService() {
 
           {/* 13. Indemnification */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">13. Indemnification</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">13. Indemnification</h2>
             <p>
               You agree to indemnify, defend, and hold harmless Obsilab, its officers, directors, employees, and agents from any claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys&apos; fees) arising from:
             </p>
@@ -224,7 +224,7 @@ export default function TermsOfService() {
 
           {/* 14. Governing Law */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">14. Governing Law & Dispute Resolution</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">14. Governing Law & Dispute Resolution</h2>
             <p>
               These terms are governed by the laws of the State of Delaware, USA, without regard to conflict of law principles.
             </p>
@@ -241,7 +241,7 @@ export default function TermsOfService() {
 
           {/* 15. Changes to Terms */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">15. Changes to Terms</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">15. Changes to Terms</h2>
             <p>
               We may update these Terms of Service from time to time. We will notify you of material changes by posting the updated terms on our website and updating the &quot;Last Updated&quot; date.
             </p>
@@ -252,7 +252,7 @@ export default function TermsOfService() {
 
           {/* 16. Contact Information */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">16. Contact Information</h2>
+            <h2 className="text-2xl font-semibold mb-4 leading-[1.1] text-[2.441rem]">16. Contact Information</h2>
             <p>
               For questions about these Terms of Service, please contact us at:
             </p>

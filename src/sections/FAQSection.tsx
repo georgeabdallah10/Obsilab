@@ -1,6 +1,5 @@
 "use client"
 
-
 import { motion } from "framer-motion";
 import {
   Accordion,
@@ -55,10 +54,10 @@ export const FAQSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-[1.1] text-[2.441rem] md:text-[3.052rem]">
             Frequently asked questions
           </h2>
-          <p className="text-xl text-antique-pearl max-w-2xl mx-auto">
+          <p className="text-xl text-antique-pearl max-w-2xl mx-auto leading-[1.5]">
             Everything you need to know about load testing with Obsilab
           </p>
         </motion.div>
@@ -80,7 +79,7 @@ export const FAQSection = () => {
                 <AccordionTrigger className="text-left text-foreground hover:text-primary hover:no-underline py-6">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-antique-pearl pb-6 leading-relaxed">
+                <AccordionContent className="text-antique-pearl pb-6 leading-[1.5] text-lg ">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

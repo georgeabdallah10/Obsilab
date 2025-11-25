@@ -64,10 +64,10 @@ export const Footer = () => {
         <div className="mb-12 grid gap-12 md:grid-cols-5">
           {/* Brand */}
           <div className="md:col-span-1">
-            <h3 className="mb-4 text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <h3 className="mb-4 text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent tracking-[-0.015em] text-[1.953rem]">
               Obsilab
             </h3>
-            <p className="text-sm leading-relaxed text-shade-frost">
+            <p className="text-sm leading-[1.5] text-shade-frost">
               Stress-test your backend with AI-powered diagnostics.
             </p>
           </div>
@@ -75,7 +75,7 @@ export const Footer = () => {
           {/* Links */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h4 className="mb-4 font-semibold text-foreground">
+              <h4 className="mb-4 font-semibold text-foreground leading-[1.3] text-[1.563rem]">
                 {section.title}
               </h4>
               <ul className="space-y-2">
@@ -93,7 +93,7 @@ export const Footer = () => {
                     ) : (
                       <Link
                         href={link.href}
-                        className="text-sm text-antique-pearl transition-colors hover:text-primary"
+                        className="text-sm text-antique-pearl transition-colors hover:text-primary "
                       >
                         {link.label}
                       </Link>
@@ -107,7 +107,7 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col items-center justify-between gap-4 border-t border-border/30 pt-8 md:flex-row">
-          <p className="text-sm text-shade-frost">
+          <p className="text-sm text-shade-frost leading-[1.5]">
             © {new Date().getFullYear()} Obsilab. All rights reserved.
           </p>
 

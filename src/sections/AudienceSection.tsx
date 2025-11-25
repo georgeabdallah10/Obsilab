@@ -38,10 +38,10 @@ export const AudienceSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-[1.1] text-[2.441rem] md:text-[3.052rem]">
             Built for modern teams
           </h2>
-          <p className="text-xl text-antique-pearl max-w-2xl mx-auto">
+          <p className="text-xl text-antique-pearl max-w-2xl mx-auto leading-[1.5]">
             Whether you're launching your first product or scaling to millions of users
           </p>
         </motion.div>
@@ -62,11 +62,11 @@ export const AudienceSection = () => {
                   </div>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-2xl font-bold text-foreground mb-4 tracking-[-0.015em] text-[1.953rem]">
                   {audience.title}
                 </h3>
                 
-                <p className="text-antique-pearl leading-relaxed">
+                <p className="text-antique-pearl leading-[1.5]">
                   {audience.description}
                 </p>
               </Card>

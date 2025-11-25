@@ -29,14 +29,14 @@ export const PainPointsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-[1.1] text-[2.441rem] md:text-[3.052rem]">
             Backends don't warn you —{" "}
             <span className="text-inferno-red">they fail suddenly.</span>
           </h2>
-          <p className="text-xl text-antique-pearl max-w-3xl mx-auto mb-4">
+          <p className="text-xl text-antique-pearl max-w-3xl mx-auto mb-4 leading-[1.5]">
             Real issues only appear under real load. By the time you notice them, users are dropping, errors are spiking, and dashboards are red.
           </p>
-          <p className="text-lg text-shade-frost">
+          <p className="text-lg text-shade-frost leading-[1.5]">
             The failures teams never catch in staging:
           </p>
         </motion.div>
@@ -55,8 +55,8 @@ export const PainPointsSection = () => {
                 <point.icon className="w-6 h-6 text-inferno-red" />
               </div>
               <div>
-                <p className="text-foreground font-semibold mb-1">{point.text}</p>
-                <p className="text-shade-frost text-sm">{point.detail}</p>
+                <p className="text-foreground font-semibold mb-1 leading-[1.5]">{point.text}</p>
+                <p className="text-shade-frost text-sm leading-[1.5]">{point.detail}</p>
               </div>
             </motion.div>
           ))}
@@ -70,10 +70,10 @@ export const PainPointsSection = () => {
           className="mt-12 text-center"
         >
           <div className="text-center">
-            <p className="text-foreground text-lg font-semibold mb-2">
+            <p className="text-foreground text-lg font-semibold mb-2 leading-[1.5]">
               Obsilab finds these issues before your users ever see them.
             </p>
-            <p className="text-primary font-bold text-xl">
+            <p className="text-primary font-bold text-xl leading-[1.5]">
               One click. Real load. Instant AI diagnosis.
             </p>
           </div>

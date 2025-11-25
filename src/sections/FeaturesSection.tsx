@@ -52,10 +52,10 @@ export const FeaturesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-[1.1] text-[2.441rem] md:text-[3.052rem]">
             Everything you need to test at scale
           </h2>
-          <p className="text-xl text-antique-pearl max-w-2xl mx-auto">
+          <p className="text-xl text-antique-pearl max-w-2xl mx-auto leading-[1.5]">
             Simple API tests to complex user flows — all without writing code
           </p>
         </motion.div>
@@ -76,11 +76,11 @@ export const FeaturesSection = () => {
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-bold text-foreground mb-3">
+                <h3 className="text-xl font-bold text-foreground mb-3 tracking-[-0.015em] text-[1.953rem]">
                   {feature.title}
                 </h3>
                 
-                <p className="text-antique-pearl leading-relaxed">
+                <p className="text-antique-pearl leading-[1.5]">
                   {feature.description}
                 </p>
               </Card>
